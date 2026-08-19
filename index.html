@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7b2948">
+  <title>For My Love ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ambient"></div>
+  <button id="musicBtn" class="music-btn" aria-label="Play music">🎵 Play Music</button>
+
+  <main id="app">
+    <section class="stage active" id="stage1">
+      <div class="hero">
+        <p class="eyebrow">A little surprise for you</p>
+        <h1>Something special<br>is waiting for you...</h1>
+        <button class="gift" id="giftBtn" aria-label="Open gift">
+          <span class="gift-lid"></span>
+          <span class="gift-box"></span>
+          <span class="gift-ribbon-v"></span>
+          <span class="gift-ribbon-h"></span>
+          <span class="gift-bow bow-left"></span>
+          <span class="gift-bow bow-right"></span>
+        </button>
+        <p class="hint">Open Your Gift 🎁</p>
+      </div>
+    </section>
+
+    <section class="stage" id="stage2">
+      <div class="card wish-card">
+        <div class="heart-icon">♥</div>
+        <p class="eyebrow">Happy Birthday Abhii</p>
+        <h2 id="wishTitle"></h2>
+        <p id="wishText"></p>
+        <button class="primary" id="toPhotos">Continue <span>❤️</span></button>
+      </div>
+    </section>
+
+    <section class="stage" id="stage3">
+      <div class="content">
+        <p class="eyebrow">Our little story</p>
+        <h2>Our Beautiful Memories 📸</h2>
+        <div class="photo-frame">
+          <img id="slideImage" src="" alt="Our memory">
+          <div class="photo-placeholder" id="photoPlaceholder">
+            <span>📷</span>
+            <p>Add your photos to <b>assets/photos/</b><br>and update the photo list in <b>script.js</b>.</p>
+          </div>
+        </div>
+        <p class="caption" id="slideCaption"></p>
+        <div class="controls">
+          <button class="circle-btn" id="prevPhoto" aria-label="Previous photo">‹</button>
+          <span id="photoCounter">1 / 1</span>
+          <button class="circle-btn" id="nextPhoto" aria-label="Next photo">›</button>
+        </div>
+        <button class="primary hidden" id="toBalloons">Continue to the next surprise 💕</button>
+      </div>
+    </section>
+
+    <section class="stage" id="stage4">
+      <div class="content">
+        <p class="eyebrow">A few little reminders</p>
+        <h2>Pop the Balloons 🎈</h2>
+        <p class="subtle">Each one has a little message just for you.</p>
+        <div class="balloon-area" id="balloonArea"></div>
+        <div class="balloon-message" id="balloonMessage"></div>
+        <div id="balloonComplete" class="hidden">
+          <p class="special-line">One last surprise is waiting for you... 💌</p>
+          <button class="letter-card" id="openLetter">
+            <span>💌</span>
+            <strong>Open My Last Letter</strong>
+            <small>For the one I love</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage" id="stage5">
+      <div class="letter-scene">
+        <div class="envelope" id="envelope">
+          <div class="envelope-back"></div>
+          <div class="letter-paper" id="letterPaper">
+            <p class="letter-title">To My Love ❤️</p>
+            <div id="letterText"></div>
+            <p class="signature" id="signature"></p>
+          </div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+        </div>
+        <button class="primary hidden" id="finishLetter">Read It Again? ❤️</button>
+      </div>
+    </section>
+
+    <section class="stage" id="stage6">
+      <div class="final-card">
+        <div class="final-heart">♥</div>
+        <p class="eyebrow">And finally...</p>
+        <h2 id="finalTitle"></h2>
+        <p id="finalText"></p>
+        <div class="forever" id="foreverText"></div>
+        <button class="secondary" id="restart">Start Again 🔄</button>
+      </div>
+    </section>
+  </main>
+
+  <audio id="birthdayMusic" loop preload="none">
+    <source src="assets/music/Birthdaysong.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
